@@ -10,6 +10,8 @@ projects: where to contribute, what is genuinely unclaimed, and how to prioritis
 | `docs/target-list.md` | Verified scan of unclaimed issues across 13 top AI repos (2026-09-25) |
 | `docs/contribution-strategy.md` | How to prioritise: why depth beats breadth |
 | `tools/scan_unclaimed.py` | Reproduces the scan; needs `GITHUB_TOKEN` |
+| `docs/blockers.md` | What blocks automated contribution and how to clear it |
+| `prs/` | One file per contribution: branch, compare URL, ready PR body, verification |
 
 ## What "unclaimed" means here
 
@@ -49,3 +51,9 @@ See `docs/contribution-strategy.md`.
 export GITHUB_TOKEN=...          # public-repo read is enough
 python tools/scan_unclaimed.py --json scan.json
 ```
+
+## In flight
+
+| Target | Branch | State |
+|---|---|---|
+| [dspy #10498](https://github.com/stanfordnlp/dspy/issues/10498) — ChatAdapter falls back on validation errors | `bhaskargurram-ai/dspy:fix/chat-adapter-validation-fallback` | pushed, [PR ready to open](https://github.com/stanfordnlp/dspy/compare/main...bhaskargurram-ai:dspy:fix/chat-adapter-validation-fallback?expand=1) |
