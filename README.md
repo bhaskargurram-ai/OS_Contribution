@@ -67,6 +67,8 @@ python tools/scan_unclaimed.py --json scan.json
 
 | [inspect_ai #5525](https://github.com/UKGovernmentBEIS/inspect_ai/issues/5525) — blank target scores every sample CORRECT | `bhaskargurram-ai/inspect_ai:fix/blank-target-scores-correct` | pushed, [PR ready to open](https://github.com/UKGovernmentBEIS/inspect_ai/compare/main...bhaskargurram-ai:inspect_ai:fix/blank-target-scores-correct?expand=1) |
 
+| [haystack #12939](https://github.com/deepset-ai/haystack/issues/12939) — Sockets.__getattribute__ reads a non-existent attribute | `bhaskargurram-ai/haystack:fix/sockets-getattribute-attribute-name` | pushed, [PR ready to open](https://github.com/deepset-ai/haystack/compare/main...bhaskargurram-ai:haystack:fix/sockets-getattribute-attribute-name?expand=1) |
+
 Before submitting any of these, read `docs/ai-contribution-policies.md` — dspy requires an AI-assistance
 disclosure line, which is included in each prepared body.
 
