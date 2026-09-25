@@ -11,6 +11,7 @@ projects: where to contribute, what is genuinely unclaimed, and how to prioritis
 | `docs/contribution-strategy.md` | How to prioritise: why depth beats breadth |
 | `tools/scan_unclaimed.py` | Reproduces the scan; needs `GITHUB_TOKEN` |
 | `docs/pr-status.md` | **Live status of every PR and what each needs next** |
+| `docs/company-oss-targets.md` | 21 more targets across AI-company OSS (Apple, Meta, NVIDIA, Microsoft, OpenAI…) |
 | `docs/fifty-targets.md` | **50 repos, one vetted PR target each** |
 | `docs/top-20-targets.md` | The 20 best targets, ranked by actionability |
 | `docs/triage-notes.md` | Issues examined and rejected, and why |
