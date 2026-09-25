@@ -10,7 +10,8 @@ projects: where to contribute, what is genuinely unclaimed, and how to prioritis
 | `docs/target-list.md` | Verified scan of unclaimed issues across 13 top AI repos (2026-09-25) |
 | `docs/contribution-strategy.md` | How to prioritise: why depth beats breadth |
 | `tools/scan_unclaimed.py` | Reproduces the scan; needs `GITHUB_TOKEN` |
-| `docs/top-20-targets.md` | **The 20 best PR targets, ranked by actionability** |
+| `docs/fifty-targets.md` | **50 repos, one vetted PR target each** |
+| `docs/top-20-targets.md` | The 20 best targets, ranked by actionability |
 | `docs/triage-notes.md` | Issues examined and rejected, and why |
 | `docs/ai-contribution-policies.md` | Per-repo rules on AI-assisted contributions |
 | `docs/blockers.md` | What blocks automated contribution and how to clear it |
