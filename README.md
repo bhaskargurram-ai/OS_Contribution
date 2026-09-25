@@ -10,6 +10,7 @@ projects: where to contribute, what is genuinely unclaimed, and how to prioritis
 | `docs/target-list.md` | Verified scan of unclaimed issues across 13 top AI repos (2026-09-25) |
 | `docs/contribution-strategy.md` | How to prioritise: why depth beats breadth |
 | `tools/scan_unclaimed.py` | Reproduces the scan; needs `GITHUB_TOKEN` |
+| `docs/pr-status.md` | **Live status of every PR and what each needs next** |
 | `docs/fifty-targets.md` | **50 repos, one vetted PR target each** |
 | `docs/top-20-targets.md` | The 20 best targets, ranked by actionability |
 | `docs/triage-notes.md` | Issues examined and rejected, and why |
