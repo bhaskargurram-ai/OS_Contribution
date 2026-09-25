@@ -64,5 +64,7 @@ python tools/scan_unclaimed.py --json scan.json
 
 | [accelerate #4253](https://github.com/huggingface/accelerate/issues/4253) — compile_regions silently runs uncompiled model | `bhaskargurram-ai/accelerate:fix/compile-regions-with-hooks` | pushed, [PR ready to open](https://github.com/huggingface/accelerate/compare/main...bhaskargurram-ai:accelerate:fix/compile-regions-with-hooks?expand=1) |
 
+| [inspect_ai #5525](https://github.com/UKGovernmentBEIS/inspect_ai/issues/5525) — blank target scores every sample CORRECT | `bhaskargurram-ai/inspect_ai:fix/blank-target-scores-correct` | pushed, [PR ready to open](https://github.com/UKGovernmentBEIS/inspect_ai/compare/main...bhaskargurram-ai:inspect_ai:fix/blank-target-scores-correct?expand=1) |
+
 Before submitting any of these, read `docs/ai-contribution-policies.md` — dspy requires an AI-assistance
 disclosure line, which is included in each prepared body.
