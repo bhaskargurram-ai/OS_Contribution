@@ -1,6 +1,6 @@
 # dspy #10497 — method-named fields diverge between attribute and item access
 
-**Status:** branch pushed (`7a3cf4f`), PR not yet opened
+**Status:** branch pushed (`8277836`), PR not yet opened
 **Branch:** `bhaskargurram-ai/dspy` → `fix/example-field-name-collision`
 **Open the PR:** https://github.com/stanfordnlp/dspy/compare/main...bhaskargurram-ai:dspy:fix/example-field-name-collision?expand=1
 

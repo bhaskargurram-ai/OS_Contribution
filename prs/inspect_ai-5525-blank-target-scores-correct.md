@@ -11,7 +11,7 @@ and failing-test evidence and ask for it to be accepted. Once a maintainer appli
 `accepted`, **reopening this same PR re-runs the gate and passes** — the branch and the
 work stand ready.
 
-**Branch (retained):** `918f2a9`
+**Branch (retained):** `758cf1f`
 **Branch:** `bhaskargurram-ai/inspect_ai` → `fix/blank-target-scores-correct`
 **Open the PR:** https://github.com/UKGovernmentBEIS/inspect_ai/compare/main...bhaskargurram-ai:inspect_ai:fix/blank-target-scores-correct?expand=1
 

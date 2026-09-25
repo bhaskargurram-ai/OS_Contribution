@@ -1,6 +1,6 @@
 # accelerate #4253 — compile_regions silently runs the uncompiled model
 
-**Status:** branch pushed (`6b931c3`), PR not yet opened
+**Status:** branch pushed (`b444ed6`), PR not yet opened
 **Branch:** `bhaskargurram-ai/accelerate` → `fix/compile-regions-with-hooks`
 **Open the PR:** https://github.com/huggingface/accelerate/compare/main...bhaskargurram-ai:accelerate:fix/compile-regions-with-hooks?expand=1
 

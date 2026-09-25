@@ -1,6 +1,6 @@
 # dspy #10498 — ChatAdapter falls back on validation errors
 
-**Status:** branch pushed (commit `1f40b1e`), PR not yet opened
+**Status:** branch pushed (commit `8eb2a57`), PR not yet opened
 **Branch:** `bhaskargurram-ai/dspy` → `fix/chat-adapter-validation-fallback`
 **Open the PR:** https://github.com/stanfordnlp/dspy/compare/main...bhaskargurram-ai:dspy:fix/chat-adapter-validation-fallback?expand=1
 

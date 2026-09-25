@@ -68,3 +68,15 @@ python tools/scan_unclaimed.py --json scan.json
 
 Before submitting any of these, read `docs/ai-contribution-policies.md` — dspy requires an AI-assistance
 disclosure line, which is included in each prepared body.
+
+## Commit authorship
+
+Commits must be authored with `gurrambhaskar.ai@gmail.com`, the address verified on the
+`bhaskargurram-ai` GitHub account. An earlier batch used a different address which GitHub
+attributes to a separate account, so the commits and the pull request showed two different
+authors. All branches have been re-authored.
+
+```bash
+git config user.name "Bhaskar Gurram"
+git config user.email "gurrambhaskar.ai@gmail.com"
+```
