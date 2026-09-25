@@ -57,3 +57,7 @@ python tools/scan_unclaimed.py --json scan.json
 | Target | Branch | State |
 |---|---|---|
 | [dspy #10498](https://github.com/stanfordnlp/dspy/issues/10498) — ChatAdapter falls back on validation errors | `bhaskargurram-ai/dspy:fix/chat-adapter-validation-fallback` | pushed, [PR ready to open](https://github.com/stanfordnlp/dspy/compare/main...bhaskargurram-ai:dspy:fix/chat-adapter-validation-fallback?expand=1) |
+| [dspy #10497](https://github.com/stanfordnlp/dspy/issues/10497) — method-named fields diverge | `bhaskargurram-ai/dspy:fix/example-field-name-collision` | pushed, [PR ready to open](https://github.com/stanfordnlp/dspy/compare/main...bhaskargurram-ai:dspy:fix/example-field-name-collision?expand=1) |
+
+Before submitting either, read `docs/ai-contribution-policies.md` — dspy requires an AI-assistance
+disclosure line, which is included in each prepared body.
