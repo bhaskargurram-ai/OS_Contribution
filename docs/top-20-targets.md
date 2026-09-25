@@ -10,6 +10,11 @@ reproduced each one. Reproduction is the first step of the work on each.
 
 ---
 
+> **Gate confirmed the hard way.** An inspect_ai PR referencing an open, well-evidenced
+> issue was auto-closed in under a minute because *the issue itself* was not labelled
+> `accepted`. Every inspect_ai target below needs that label first. See
+> `docs/ai-contribution-policies.md`.
+
 ## Tier 1 — maintainer-validated (do these first)
 
 `inspect_ai` labels issues `accepted` once a maintainer agrees the bug is real, which
@@ -84,7 +89,13 @@ through an existing issue — contributing there means an RFC or a bug you find 
 [#23601](https://github.com/keras-team/keras/issues/23601) announces a new and stricter PR
 policy. Low yield.
 
-## Sequencing
+## Revised sequencing
+
+`lm-evaluation-harness` (targets 4–8) has no acceptance gate, so it is now the fastest
+path to merged work. The inspect_ai targets are still worth doing, but each needs its
+issue labelled `accepted` before any code is written — file or comment first, then build.
+
+## Original sequencing note
 
 Tier 1 and 2 are 13 issues across two repos with fast Python test suites. That is the
 efficient path: two environments to set up, thirteen targets, and `inspect_ai`'s `accepted`

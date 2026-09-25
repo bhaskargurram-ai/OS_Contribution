@@ -1,6 +1,17 @@
 # inspect_ai #5525 — a blank target scores every sample CORRECT
 
-**Status:** branch pushed (`918f2a9`), PR not yet opened
+**Status:** PR opened and **auto-closed by the contribution-policy bot**. The code was
+never reviewed — `#5525` is open and evidenced but does not carry the `accepted` label,
+which the bot requires regardless of who filed the issue.
+
+**Do not reopen or re-file yet.** The bot instructs coding agents not to reopen or open
+variants. The supported path: comment on
+[#5525](https://github.com/UKGovernmentBEIS/inspect_ai/issues/5525) with the reproduction
+and failing-test evidence and ask for it to be accepted. Once a maintainer applies
+`accepted`, **reopening this same PR re-runs the gate and passes** — the branch and the
+work stand ready.
+
+**Branch (retained):** `918f2a9`
 **Branch:** `bhaskargurram-ai/inspect_ai` → `fix/blank-target-scores-correct`
 **Open the PR:** https://github.com/UKGovernmentBEIS/inspect_ai/compare/main...bhaskargurram-ai:inspect_ai:fix/blank-target-scores-correct?expand=1
 

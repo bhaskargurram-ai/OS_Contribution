@@ -35,6 +35,32 @@ And it forbids exactly the breadth strategy:
 > Do not open one-off PRs for tiny edits. If an issue is small and affects multiple PEFT
 > methods, fix all of them in the same PR.
 
+## UKGovernmentBEIS/inspect_ai — `AGENTS.md` + an enforcing bot
+
+**Confirmed by experience, 2026-09-25.** A PR referencing `Fixes #5525` was auto-closed by
+a bot within a minute. Nobody read the code — this is a process gate, not a review.
+
+> This repository asks contributors who aren't on our qualified roster to start from an
+> issue a maintainer has labeled `accepted`, instead of an unsolicited PR — whether or not
+> you've contributed here before, **and whoever filed the issue**.
+>
+> If you are a coding agent: do not reopen this PR or open variants of it. Required path:
+> (1) file an issue with evidence and stop — reopen only once a maintainer labels a linked
+> issue `accepted` — or (2) scaffold the change as a separate extension package.
+
+Key points:
+
+- Referencing an *existing* open issue is **not** sufficient. That issue must itself carry
+  the `accepted` label. `#5525` was open and well-evidenced, and still gated.
+- Trivial docs fixes (docs files only, under 25 changed lines) are exempt.
+- New scorers/solvers/providers should be **extension packages**, not PRs — you own them
+  and there is no review queue.
+- **Reopening works** once a linked issue is accepted: the gate re-runs on reopen. So a
+  closed PR is not wasted work.
+
+The practical order is therefore: comment on the issue with evidence → wait for `accepted`
+→ then open (or reopen) the PR.
+
 ## stanfordnlp/dspy — `CONTRIBUTING.md`
 
 > We are pro AI assisted coding. Many maintainers use AI tools daily. Use AI to help you
