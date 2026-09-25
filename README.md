@@ -1,14 +1,14 @@
 # OS_Contribution
 
 Working repository for a planned open-source contribution campaign across major AI
-projects, and for the evidence trail that goes with it.
+projects: where to contribute, what is genuinely unclaimed, and how to prioritise.
 
 ## Contents
 
 | Path | What it is |
 |---|---|
 | `docs/target-list.md` | Verified scan of unclaimed issues across 13 top AI repos (2026-09-25) |
-| `docs/eb1a-strategy.md` | Honest assessment of what actually counts as EB-1A evidence |
+| `docs/contribution-strategy.md` | How to prioritise: why depth beats breadth |
 | `tools/scan_unclaimed.py` | Reproduces the scan; needs `GITHUB_TOKEN` |
 
 ## What "unclaimed" means here
@@ -36,12 +36,12 @@ Filters differ per repo (label vocabularies are not shared); see `tools/scan_unc
 
 ## The short strategic answer
 
-Breadth is the wrong instinct here. Volume of merged PRs is weak EB-1A evidence; what
-carries weight is *status* and *independent attestation* — maintainer role, release notes
-naming you, letters from maintainers who have merged your work repeatedly. That argues
-for going deep in one or two projects rather than wide across twenty.
+Breadth is the tempting instinct and the weaker one. Merge count does not compound;
+standing does — maintainer role, release-note credit, downstream adoption, reviewers who
+trust you. That argues for going deep in one or two projects rather than wide across
+twenty.
 
-See `docs/eb1a-strategy.md`. Not legal advice.
+See `docs/contribution-strategy.md`.
 
 ## Re-running the scan
 

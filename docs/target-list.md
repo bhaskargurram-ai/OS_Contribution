@@ -74,8 +74,8 @@ named model integration lands with your name on it in release notes.
 | 9508 | AnimateDiff SparseCtrl RGB does not match reference implementation | 9 |
 
 A full model/pipeline integration here is the single most *legible* artifact on this
-whole list: it ships in a release, it is documented under your name, and it is
-independently citable.
+whole list: it ships in a release, it is documented under your name, and downstream
+projects cite it directly.
 
 ---
 
@@ -94,8 +94,8 @@ independently citable.
 | 9129 | CMake clean-up / refactor tasks | 21 |
 
 `#31624` (5-minute checkpoint load) is the standout: a measurable performance win with a
-number you can put in a petition. Perf wins are the easiest contributions to
-*quantify* for an adjudicator.
+number attached. Perf wins are the easiest contributions to quantify and the easiest to
+explain to someone who does not read the diff.
 
 ### sgl-project/sglang
 | # | Title | Comments |
