@@ -74,6 +74,8 @@ python tools/scan_unclaimed.py --json scan.json
 
 | [datasets #8637](https://github.com/huggingface/datasets/issues/8637) — FileLock wrapper drops every constructor arg | `bhaskargurram-ai/datasets:fix/filelock-forward-constructor-args` | pushed, [PR ready to open](https://github.com/huggingface/datasets/compare/main...bhaskargurram-ai:datasets:fix/filelock-forward-constructor-args?expand=1) |
 
+| [langsmith-sdk #3569](https://github.com/langchain-ai/langsmith-sdk/issues/3569) — HTTPError drops `.response` | `bhaskargurram-ai/langsmith-sdk:fix/http-error-keeps-response` | pushed, [PR ready to open](https://github.com/langchain-ai/langsmith-sdk/compare/main...bhaskargurram-ai:langsmith-sdk:fix/http-error-keeps-response?expand=1) |
+
 Before submitting any of these, read `docs/ai-contribution-policies.md` — dspy requires an AI-assistance
 disclosure line, which is included in each prepared body.
 

@@ -22,3 +22,5 @@ the population breaks down roughly as:
 
 Only the last category converts to a mergeable PR, and it is a minority of the total.
 Budget effort against that fraction, not against the headline count.
+| [markitdown #2468](https://github.com/microsoft/markitdown/issues/2468) — RSS/Atom link resolution collapses repeated slashes | **Deferred by maintainers.** Root cause is CPython's `urllib.parse.urljoin` (CPython #84774, upstream PR #126679 open). A workaround in markitdown would be closed as waiting-on-upstream. Do not build. |
+| [markitdown #2382](https://github.com/microsoft/markitdown/issues/2382) — DOCX OCR text matched to images by position | **Reporter-owned.** The reporter laid out the full design (SHA-256 digest matching) and said they will submit the PR. Also needs new ≥12-image reversed-order fixtures. Duplicating it would get closed. |
