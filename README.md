@@ -86,6 +86,8 @@ python tools/scan_unclaimed.py --json scan.json
 
 | [graphrag #2573](https://github.com/microsoft/graphrag/issues/2573) — `community_level` has no effect since v2.0.0 | `bhaskargurram-ai/graphrag:fix/community-level-rollup-groups-by-entity` | pushed, [PR ready to open](https://github.com/microsoft/graphrag/compare/main...bhaskargurram-ai:graphrag:fix/community-level-rollup-groups-by-entity?expand=1) — **not as a Draft** (repo policy) |
 
+| [tokenizers #2447](https://github.com/huggingface/tokenizers/issues/2447) — 1.0.0rc2 refuses byte-level vocabs that 0.23.x loaded | `bhaskargurram-ai/tokenizers:fix/byte-level-exempt-unreachable-byte-atoms` | pushed, [PR ready to open](https://github.com/huggingface/tokenizers/compare/main...bhaskargurram-ai:tokenizers:fix/byte-level-exempt-unreachable-byte-atoms?expand=1) — **open as a draft first** (repo policy) |
+
 Before submitting any of these, read `docs/ai-contribution-policies.md` — dspy requires an AI-assistance
 disclosure line, which is included in each prepared body.
 
