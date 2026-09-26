@@ -78,6 +78,8 @@ python tools/scan_unclaimed.py --json scan.json
 
 | [datasets #8681](https://github.com/huggingface/datasets/issues/8681) — ClassLabel rejects pandas-3 `large_string` | `bhaskargurram-ai/datasets:fix/classlabel-cast-large-string` | pushed, [PR ready to open](https://github.com/huggingface/datasets/compare/main...bhaskargurram-ai:datasets:fix/classlabel-cast-large-string?expand=1) |
 
+| [transformers.js #1767](https://github.com/huggingface/transformers.js/issues/1767) — one rejected session poisons every later one | `bhaskargurram-ai/transformers.js:fix/serial-chain-rejection-poisons-later-sessions` | pushed, [PR ready to open](https://github.com/huggingface/transformers.js/compare/main...bhaskargurram-ai:transformers.js:fix/serial-chain-rejection-poisons-later-sessions?expand=1) — **comment on the issue first** (repo policy) |
+
 Before submitting any of these, read `docs/ai-contribution-policies.md` — dspy requires an AI-assistance
 disclosure line, which is included in each prepared body.
 
