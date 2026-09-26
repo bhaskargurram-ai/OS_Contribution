@@ -72,11 +72,11 @@ python tools/scan_unclaimed.py --json scan.json
 
 | [haystack #12939](https://github.com/deepset-ai/haystack/issues/12939) — Sockets.__getattribute__ reads a non-existent attribute | `bhaskargurram-ai/haystack:fix/sockets-getattribute-attribute-name` | **PR open:** https://github.com/deepset-ai/haystack/pull/12966 |
 
-| [datasets #8637](https://github.com/huggingface/datasets/issues/8637) — FileLock wrapper drops every constructor arg | `bhaskargurram-ai/datasets:fix/filelock-forward-constructor-args` | pushed, [PR ready to open](https://github.com/huggingface/datasets/compare/main...bhaskargurram-ai:datasets:fix/filelock-forward-constructor-args?expand=1) |
+| [datasets #8637](https://github.com/huggingface/datasets/issues/8637) — FileLock wrapper drops every constructor arg | `bhaskargurram-ai/datasets:fix/filelock-forward-constructor-args` | **PR open:** https://github.com/huggingface/datasets/pull/8687 |
 
 | [langsmith-sdk #3569](https://github.com/langchain-ai/langsmith-sdk/issues/3569) — HTTPError drops `.response` | `bhaskargurram-ai/langsmith-sdk:fix/http-error-keeps-response` | **PR open:** https://github.com/langchain-ai/langsmith-sdk/pull/3597 |
 
-| [datasets #8681](https://github.com/huggingface/datasets/issues/8681) — ClassLabel rejects pandas-3 `large_string` | `bhaskargurram-ai/datasets:fix/classlabel-cast-large-string` | pushed, [PR ready to open](https://github.com/huggingface/datasets/compare/main...bhaskargurram-ai:datasets:fix/classlabel-cast-large-string?expand=1) |
+| [datasets #8681](https://github.com/huggingface/datasets/issues/8681) — ClassLabel rejects pandas-3 `large_string` | `bhaskargurram-ai/datasets:fix/classlabel-cast-large-string` | **PR open:** https://github.com/huggingface/datasets/pull/8688 |
 
 | [transformers.js #1767](https://github.com/huggingface/transformers.js/issues/1767) — one rejected session poisons every later one | `bhaskargurram-ai/transformers.js:fix/serial-chain-rejection-poisons-later-sessions` | **PR open:** https://github.com/huggingface/transformers.js/pull/1780 |
 
