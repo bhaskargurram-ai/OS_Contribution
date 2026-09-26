@@ -81,3 +81,16 @@ printf findings in `distancer/dot_product_amd64_test.go` and `distancer/hamming_
 pre-existing, in files this branch does not touch.
 
 Diff is 109 insertions, 0 deletions across 2 files.
+
+## Round 2 — test cleanup (2026-09-26)
+
+Two bot findings on https://github.com/weaviate/weaviate/pull/13285:
+
+- Copilot (medium): each table case built an index and never released it. Now `defer idx.Drop(ctx, false)`, matching `multivector_entrypoint_repair_test.go`.
+- SonarQube quality gate: 18.2% duplicated lines in new code. The `New(Config{...})` block was copied from the repair test. Extracted `newMultivectorTestIndex(t, store, id, mvCfg)` next to `mvDeletableStore` in the repair test file; both tests call it. Net: 33 insertions, 54 deletions across the two test files.
+
+Reply to post on the Copilot thread (discussion_r4109857147):
+
+---
+Done — each case now `defer idx.Drop(ctx, false)`, the same release the sibling multivector tests use. The index construction is also pulled into a shared `newMultivectorTestIndex` helper so the new test no longer duplicates the repair test's setup, which is what SonarQube flagged.
+---

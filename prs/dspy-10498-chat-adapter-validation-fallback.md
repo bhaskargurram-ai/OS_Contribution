@@ -84,3 +84,21 @@ identically on an unmodified checkout of `main` and are unrelated to this change
 | `ruff format --check` | repo is not format-clean upstream; my lines add nothing new |
 
 Diff is 113 insertions across 4 files.
+
+## Round 2 — pushed `f8331b7` (2026-09-26)
+
+Greptile P2 on https://github.com/stanfordnlp/dspy/pull/10499: `Literal[...] | None` was
+classified as open-ended because only the top-level origin was checked. Fixed by unwrapping
+unions (closed-set when every non-None member is). New test
+`test_chat_adapter_does_not_fall_back_for_an_optional_literal_member_violation` fails on
+the previous head, passes now. `pytest tests/adapters tests/predict` — 884 passed, 145
+skipped. ruff clean.
+
+Reply to post on the PR thread (discussion_r4109162525):
+
+---
+Good catch — `Literal[...] | None` has a `Union` origin, so the top-level check treated it
+as open-ended. `f8331b7` unwraps unions: an annotation is closed-set when every member
+other than `None` is. Added a test for the optional Literal case; it fails on the previous
+head. `pytest tests/adapters tests/predict` — 884 passed, 145 skipped.
+---
