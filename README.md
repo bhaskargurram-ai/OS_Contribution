@@ -63,30 +63,30 @@ python tools/scan_unclaimed.py --json scan.json
 
 | Target | Branch | State |
 |---|---|---|
-| [dspy #10498](https://github.com/stanfordnlp/dspy/issues/10498) — ChatAdapter falls back on validation errors | `bhaskargurram-ai/dspy:fix/chat-adapter-validation-fallback` | pushed, [PR ready to open](https://github.com/stanfordnlp/dspy/compare/main...bhaskargurram-ai:dspy:fix/chat-adapter-validation-fallback?expand=1) |
-| [dspy #10497](https://github.com/stanfordnlp/dspy/issues/10497) — method-named fields diverge | `bhaskargurram-ai/dspy:fix/example-field-name-collision` | pushed, [PR ready to open](https://github.com/stanfordnlp/dspy/compare/main...bhaskargurram-ai:dspy:fix/example-field-name-collision?expand=1) |
+| [dspy #10498](https://github.com/stanfordnlp/dspy/issues/10498) — ChatAdapter falls back on validation errors | `bhaskargurram-ai/dspy:fix/chat-adapter-validation-fallback` | **PR open:** https://github.com/stanfordnlp/dspy/pull/10499 |
+| [dspy #10497](https://github.com/stanfordnlp/dspy/issues/10497) — method-named fields diverge | `bhaskargurram-ai/dspy:fix/example-field-name-collision` | **PR open:** https://github.com/stanfordnlp/dspy/pull/10501 |
 
-| [accelerate #4253](https://github.com/huggingface/accelerate/issues/4253) — compile_regions silently runs uncompiled model | `bhaskargurram-ai/accelerate:fix/compile-regions-with-hooks` | pushed, [PR ready to open](https://github.com/huggingface/accelerate/compare/main...bhaskargurram-ai:accelerate:fix/compile-regions-with-hooks?expand=1) |
+| [accelerate #4253](https://github.com/huggingface/accelerate/issues/4253) — compile_regions silently runs uncompiled model | `bhaskargurram-ai/accelerate:fix/compile-regions-with-hooks` | **PR open:** https://github.com/huggingface/accelerate/pull/4337 |
 
-| [inspect_ai #5525](https://github.com/UKGovernmentBEIS/inspect_ai/issues/5525) — blank target scores every sample CORRECT | `bhaskargurram-ai/inspect_ai:fix/blank-target-scores-correct` | pushed, [PR ready to open](https://github.com/UKGovernmentBEIS/inspect_ai/compare/main...bhaskargurram-ai:inspect_ai:fix/blank-target-scores-correct?expand=1) |
+| [inspect_ai #5525](https://github.com/UKGovernmentBEIS/inspect_ai/issues/5525) — blank target scores every sample CORRECT | `bhaskargurram-ai/inspect_ai:fix/blank-target-scores-correct` | **Auto-closed twice** ([#5563](https://github.com/UKGovernmentBEIS/inspect_ai/pull/5563), [#5568](https://github.com/UKGovernmentBEIS/inspect_ai/pull/5568)) by the contribution-policy bot: the issue must carry the `accepted` label first. Do not reopen; comment on #5525 and wait for the label |
 
-| [haystack #12939](https://github.com/deepset-ai/haystack/issues/12939) — Sockets.__getattribute__ reads a non-existent attribute | `bhaskargurram-ai/haystack:fix/sockets-getattribute-attribute-name` | pushed, [PR ready to open](https://github.com/deepset-ai/haystack/compare/main...bhaskargurram-ai:haystack:fix/sockets-getattribute-attribute-name?expand=1) |
+| [haystack #12939](https://github.com/deepset-ai/haystack/issues/12939) — Sockets.__getattribute__ reads a non-existent attribute | `bhaskargurram-ai/haystack:fix/sockets-getattribute-attribute-name` | **PR open:** https://github.com/deepset-ai/haystack/pull/12966 |
 
 | [datasets #8637](https://github.com/huggingface/datasets/issues/8637) — FileLock wrapper drops every constructor arg | `bhaskargurram-ai/datasets:fix/filelock-forward-constructor-args` | pushed, [PR ready to open](https://github.com/huggingface/datasets/compare/main...bhaskargurram-ai:datasets:fix/filelock-forward-constructor-args?expand=1) |
 
-| [langsmith-sdk #3569](https://github.com/langchain-ai/langsmith-sdk/issues/3569) — HTTPError drops `.response` | `bhaskargurram-ai/langsmith-sdk:fix/http-error-keeps-response` | pushed, [PR ready to open](https://github.com/langchain-ai/langsmith-sdk/compare/main...bhaskargurram-ai:langsmith-sdk:fix/http-error-keeps-response?expand=1) |
+| [langsmith-sdk #3569](https://github.com/langchain-ai/langsmith-sdk/issues/3569) — HTTPError drops `.response` | `bhaskargurram-ai/langsmith-sdk:fix/http-error-keeps-response` | **PR open:** https://github.com/langchain-ai/langsmith-sdk/pull/3597 |
 
 | [datasets #8681](https://github.com/huggingface/datasets/issues/8681) — ClassLabel rejects pandas-3 `large_string` | `bhaskargurram-ai/datasets:fix/classlabel-cast-large-string` | pushed, [PR ready to open](https://github.com/huggingface/datasets/compare/main...bhaskargurram-ai:datasets:fix/classlabel-cast-large-string?expand=1) |
 
-| [transformers.js #1767](https://github.com/huggingface/transformers.js/issues/1767) — one rejected session poisons every later one | `bhaskargurram-ai/transformers.js:fix/serial-chain-rejection-poisons-later-sessions` | pushed, [PR ready to open](https://github.com/huggingface/transformers.js/compare/main...bhaskargurram-ai:transformers.js:fix/serial-chain-rejection-poisons-later-sessions?expand=1) — **comment on the issue first** (repo policy) |
+| [transformers.js #1767](https://github.com/huggingface/transformers.js/issues/1767) — one rejected session poisons every later one | `bhaskargurram-ai/transformers.js:fix/serial-chain-rejection-poisons-later-sessions` | **PR open:** https://github.com/huggingface/transformers.js/pull/1780 |
 
 | [modal-client #4130](https://github.com/modal-labs/modal-client/issues/4130) — `volume get` corrupts a directory download to a new path | `bhaskargurram-ai/modal-client:fix/volume-get-new-directory-destination` | pushed, [PR ready to open](https://github.com/modal-labs/modal-client/compare/main...bhaskargurram-ai:modal-client:fix/volume-get-new-directory-destination?expand=1) |
 
-| [weaviate #12959](https://github.com/weaviate/weaviate/issues/12959) — HNSW `AddMulti` panics on a nil multivector | `bhaskargurram-ai/weaviate:fix/hnsw-addmulti-nil-multivector` | pushed, [PR ready to open](https://github.com/weaviate/weaviate/compare/main...bhaskargurram-ai:weaviate:fix/hnsw-addmulti-nil-multivector?expand=1) |
+| [weaviate #12959](https://github.com/weaviate/weaviate/issues/12959) — HNSW `AddMulti` panics on a nil multivector | `bhaskargurram-ai/weaviate:fix/hnsw-addmulti-nil-multivector` | **PR open:** https://github.com/weaviate/weaviate/pull/13285 |
 
 | [graphrag #2573](https://github.com/microsoft/graphrag/issues/2573) — `community_level` has no effect since v2.0.0 | `bhaskargurram-ai/graphrag:fix/community-level-rollup-groups-by-entity` | pushed, [PR ready to open](https://github.com/microsoft/graphrag/compare/main...bhaskargurram-ai:graphrag:fix/community-level-rollup-groups-by-entity?expand=1) — **not as a Draft** (repo policy) |
 
-| [tokenizers #2447](https://github.com/huggingface/tokenizers/issues/2447) — 1.0.0rc2 refuses byte-level vocabs that 0.23.x loaded | `bhaskargurram-ai/tokenizers:fix/byte-level-exempt-unreachable-byte-atoms` | pushed, [PR ready to open](https://github.com/huggingface/tokenizers/compare/main...bhaskargurram-ai:tokenizers:fix/byte-level-exempt-unreachable-byte-atoms?expand=1) — **open as a draft first** (repo policy) |
+| [tokenizers #2447](https://github.com/huggingface/tokenizers/issues/2447) — 1.0.0rc2 refuses byte-level vocabs that 0.23.x loaded | `bhaskargurram-ai/tokenizers:fix/byte-level-exempt-unreachable-byte-atoms` | **PR open:** https://github.com/huggingface/tokenizers/pull/2459 |
 
 Before submitting any of these, read `docs/ai-contribution-policies.md` — dspy requires an AI-assistance
 disclosure line, which is included in each prepared body.
