@@ -82,6 +82,10 @@ python tools/scan_unclaimed.py --json scan.json
 
 | [modal-client #4130](https://github.com/modal-labs/modal-client/issues/4130) — `volume get` corrupts a directory download to a new path | `bhaskargurram-ai/modal-client:fix/volume-get-new-directory-destination` | pushed, [PR ready to open](https://github.com/modal-labs/modal-client/compare/main...bhaskargurram-ai:modal-client:fix/volume-get-new-directory-destination?expand=1) |
 
+| [weaviate #12959](https://github.com/weaviate/weaviate/issues/12959) — HNSW `AddMulti` panics on a nil multivector | `bhaskargurram-ai/weaviate:fix/hnsw-addmulti-nil-multivector` | pushed, [PR ready to open](https://github.com/weaviate/weaviate/compare/main...bhaskargurram-ai:weaviate:fix/hnsw-addmulti-nil-multivector?expand=1) |
+
+| [graphrag #2573](https://github.com/microsoft/graphrag/issues/2573) — `community_level` has no effect since v2.0.0 | `bhaskargurram-ai/graphrag:fix/community-level-rollup-groups-by-entity` | pushed, [PR ready to open](https://github.com/microsoft/graphrag/compare/main...bhaskargurram-ai:graphrag:fix/community-level-rollup-groups-by-entity?expand=1) — **not as a Draft** (repo policy) |
+
 Before submitting any of these, read `docs/ai-contribution-policies.md` — dspy requires an AI-assistance
 disclosure line, which is included in each prepared body.
 
