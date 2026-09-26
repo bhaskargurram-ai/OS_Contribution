@@ -85,3 +85,40 @@ This change was produced with AI assistance. I reviewed every changed line, ran 
 - The assignment named the test file `test_quant_pre_process.py`; the repo's existing file is `test_quant_preprocess.py`, so the test was added there.
 - Behaviour change a reviewer may ask about: on optimizer *failure* the code now always continues with the un-optimized model instead of pointing at a nonexistent `optimized.onnx`. This was already the (silent) behaviour for `skip_symbolic_shape=True`; for `skip_symbolic_shape=False` it previously crashed later with a confusing `ValidationError: Unable to open proto file .../optimized.onnx`.
 - Not touched: the unreachable `isinstance(input_model, onnx.ModelProto)` branch inside the ONNX-shape-inference stage, and the fact that `extract_raw_data_from_model` mutates a caller-supplied `ModelProto` when `skip_symbolic_shape=True` — both pre-existing and out of scope.
+
+## Round 2
+
+**PR:** microsoft/onnxruntime#32830 — Copilot review flagged one high-severity finding on `shape_inference.py`: when `input_model` is a `ModelProto` and optimizer session creation fails, the fallback carries forward a corrupted model because `extract_raw_data_from_model(input_model)` mutates the same object held by `model`.
+
+**New commit:** `81eedc9` ("Keep the original ModelProto when the optimizer fails in quant_pre_process"), pushed on top of `0cfb994` to `bhaskargurram-ai/onnxruntime:fix/quant-pre-process-skip-shape-inference` (no rebase, no force-push).
+
+### What changed
+
+- `onnxruntime/python/tools/quantization/shape_inference.py`: in the `isinstance(input_model, onnx.ModelProto)` branch of the optimizer stage, `extract_raw_data_from_model` now runs on `copy.deepcopy(input_model)` (`session_model`), and `session_model.SerializeToString()` is what goes to `InferenceSession`. `model`/`input_model` keep the untouched proto, so the `except` fallback (and the caller's own object) are intact. Added `import copy`. Success path unchanged: the session gets the same serialized-without-raw-data bytes plus the same `add_external_initializers` OrtValues as before, and the optimized file is written to the temp dir and loaded back before the `TemporaryDirectory` exits.
+- `onnxruntime/test/python/quantization/test_quant_preprocess.py`: new `TestOptimizerFailureKeepsModelProtoInput` next to `TestSkipShapeInferenceKeepsOptimization`. It builds an `Identity -> Add` ModelProto with a raw-data `bias` initializer, patches `onnxruntime.InferenceSession` to raise, calls `quant_pre_process(input_model=<ModelProto>, skip_optimization=False)` for all 4 `skip_onnx_shape` x `skip_symbolic_shape` combinations (subTests), and asserts: the caller's initializer still has `raw_data` and is not `EXTERNAL`; the saved model exists, `onnx.load`s, passes `onnx.checker.check_model`, has nodes `["Identity", "Add"]`, and its initializer is not `EXTERNAL` and equals the original values.
+
+### Reproduction (before the fix, commit `0cfb994`)
+
+ModelProto input, `InferenceSession` patched to raise, `skip_optimization=False`:
+
+- `skip_symbolic_shape=False` (either `skip_onnx_shape`): ok — symbolic shape inference returns a new proto and writes it to a file, so the ModelProto branch is not taken.
+- `skip_onnx_shape=False, skip_symbolic_shape=True`: `ValidationError: Data of TensorProto ( tensor name: bias) should be stored in /tmp/pre.quant.xxx/foo.bin, but it is not regular file.` raised from inside `quant_pre_process` (the ONNX shape inference stage saves and reloads the mutated proto).
+- `skip_onnx_shape=True, skip_symbolic_shape=True`: call returns, but the caller's initializer has `data_location=EXTERNAL`, `raw_data` cleared, `external_data=[('location', 'foo.bin')]`; the saved output has the same, and `onnx.load(output)` raises the same `ValidationError`.
+
+After the fix all four combinations return, the caller's proto has `data_location=DEFAULT` with `raw_data` present, and the saved model loads with the original `bias` values. Also re-checked the ModelProto *success* path (no patch) for the same 4 combinations: output is `['Add']` with the correct `bias`, `check_model` passes.
+
+Note: this mutation predates the PR (the ModelProto branch and `extract_raw_data_from_model` are unchanged on `main`); the previous round's notes listed it as pre-existing/out of scope, but since the PR makes the fallback path the deliberate behaviour on optimizer failure, it is fair to fix it here.
+
+### Test / lint results
+
+Same overlay setup as round 1 (uv venv, python 3.11, `onnxruntime==1.30.0`, `onnx==1.23.0`, `numpy`, `sympy`, `pytest`, `ruff==0.12.12`, `lintrunner`, `lintrunner-adapters`; `site-packages/onnxruntime/quantization` replaced by a symlink to the clone's package). Venv deleted afterwards.
+
+- `python -m pytest -q test_quant_preprocess.py test_quant_issues.py` (from `onnxruntime/test/python/quantization/`) → 8 passed, 12 subtests passed
+- New test with the fix stashed → `2 failed, 1 passed, 2 subtests passed` (the two `skip_symbolic_shape=True` subtests fail on `initializer.HasField("raw_data")`)
+- `ruff check` on both changed files → All checks passed
+- `ruff format --check` on both → 2 files already formatted
+- `lintrunner --take RUFF,RUFF-FORMAT` on both → ok No lint issues
+
+### Reply draft for the Copilot thread
+
+Good catch, thanks. `extract_raw_data_from_model` does clear `raw_data` in place and point the initializers at a placeholder `foo.bin`, so with a `ModelProto` input and `skip_symbolic_shape=True` a failed session creation left both the fallback model and the caller's proto referencing a file that does not exist. Fixed in 81eedc9 by running the extraction on a `copy.deepcopy` of the proto and serializing that copy for the session; the original is kept for the fallback path and the success path is unchanged. Added `TestOptimizerFailureKeepsModelProtoInput`, which forces `InferenceSession` to raise with a ModelProto input and checks that the caller's initializers keep their raw data and that the saved model loads, passes the checker and matches the input, for both `skip_symbolic_shape` values.
