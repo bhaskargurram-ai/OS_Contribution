@@ -1,6 +1,6 @@
 # candle #3707 — CPU quantized matmul has no batch path: prefill runs at token-at-a-time speed
 
-**Status:** branch pushed (commit `SHA7_PLACEHOLDER`), PR not yet opened
+**Status:** branch pushed (commit `c8d3271`), PR not yet opened
 **Branch:** `bhaskargurram-ai/candle` → `fix/cpu-quantized-matmul-batched-prefill`
 **Open the PR:** https://github.com/huggingface/candle/compare/main...bhaskargurram-ai:candle:fix/cpu-quantized-matmul-batched-prefill?expand=1
 
@@ -87,8 +87,8 @@ needs kernels that reuse the unpacked weight block across several lhs rows (a mu
   order satisfied it), and pins down the bit-identical guarantee that the tiled order must keep.
 - `bench_qmatmul_prefill_cpu` (new, `#[ignore]`): the timing harness above.
 - `cargo test -p candle-core --release --test quantized_tests`: 53 passed, 1 ignored.
-- `cargo test -p candle-core --test quantized_tests`: DEBUG_QT_PLACEHOLDER
-- `cargo test -p candle-core --lib`: DEBUG_LIB_PLACEHOLDER
+- `cargo test -p candle-core --test quantized_tests`: 53 passed, 1 ignored.
+- `cargo test -p candle-core --lib`: 24 passed.
 - `cargo fmt --all -- --check`: clean.
 - `cargo clippy -p candle-core --all-targets -- -D warnings`: clean.
 
