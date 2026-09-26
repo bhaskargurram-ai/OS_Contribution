@@ -80,6 +80,8 @@ python tools/scan_unclaimed.py --json scan.json
 
 | [transformers.js #1767](https://github.com/huggingface/transformers.js/issues/1767) — one rejected session poisons every later one | `bhaskargurram-ai/transformers.js:fix/serial-chain-rejection-poisons-later-sessions` | pushed, [PR ready to open](https://github.com/huggingface/transformers.js/compare/main...bhaskargurram-ai:transformers.js:fix/serial-chain-rejection-poisons-later-sessions?expand=1) — **comment on the issue first** (repo policy) |
 
+| [modal-client #4130](https://github.com/modal-labs/modal-client/issues/4130) — `volume get` corrupts a directory download to a new path | `bhaskargurram-ai/modal-client:fix/volume-get-new-directory-destination` | pushed, [PR ready to open](https://github.com/modal-labs/modal-client/compare/main...bhaskargurram-ai:modal-client:fix/volume-get-new-directory-destination?expand=1) |
+
 Before submitting any of these, read `docs/ai-contribution-policies.md` — dspy requires an AI-assistance
 disclosure line, which is included in each prepared body.
 
